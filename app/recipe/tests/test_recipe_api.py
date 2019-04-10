@@ -256,7 +256,7 @@ class PrivateIngredientApiTest(TestCase):
 
         self.assertIn(serializer_1.data, res.data)
         self.assertIn(serializer_2.data, res.data)
-        self.assertIn(serializer_3.data, res.data)
+        self.assertNotIn(serializer_3.data, res.data)
 
 
 class RecipeImageUploadTest(TestCase):
